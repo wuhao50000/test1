@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../js/bootstrap.min.js">
+<link rel="stylesheet" href="../css/test.css">
+<!--<script>-->
+    <!--function check() {-->
+        <!--var username = $("#username").val();-->
+        <!--var password = $("#password").val();-->
+        <!--//alert(username);-->
+        <!--//data:{"username":username,"password":password}-->
+        <!--$.ajax({url:"login",data:{"username":username,"password":password},success:function (data) {-->
+            <!--//alert(data+data.user_name+data.user_password);-->
+               <!--//alert(data.user_name+"  "+data.user_password)-->
+               <!--$("#checkpassword").hide();-->
+               <!--$("#checkusername").hide();-->
+               <!--if(data != null){-->
+                   <!--if(data.user_name == username && data.user_name != null){-->
+                       <!--if(data.user_password == password){-->
+                           <!--//登录成功-->
+                           <!--window.location.href="/gotostudent";-->
+                       <!--}else{-->
+                           <!--//密码不正确-->
+                          <!--// alert("密码不正确");-->
+                           <!--$("#checkpassword").show();-->
+                       <!--}-->
+                   <!--}else {-->
+                       <!--//用户名不存在-->
+                       <!--//alert("用户名不存在");-->
+                       <!--$("#checkusername").show();-->
+                   <!--}-->
+
+               <!--}-->
+
+
+        <!--}});-->
+    <!--}-->
+
+<!--</script>-->
+
+<body>
+    <div class="mian-container">
+        <!--页面头-->
+        <div class="header-panel" >
+            <div class="container" id="loginheader">
+                <img src="images/loginheaderlogo.png" class="headerlogo">
+            </div>
+        </div>
+        <!--登录主体-->
+        <div class="login-main container">
+            <div class="container">
+                <div class="login-image">
+                    <img src="images/banner-1.07c143a.png">
+                </div>
+                <div class="container login-mid">
+                    <div class="login-page">
+                        <div class="login-title">TLIAS系统·学员系统</div>
+                        <!--form表单-->
+                        <div class="container form-container"  >
+                            <form action="/login" method="post">
+                                <div class="form-item">
+                                    <div class="label-box"><img src="images/username.png"></div>
+                                    <input type="text" name="username" placeholder="请输入账号登录" class="text-input" id="username">
+                                    <span id="checkusername">用户名不存在</span>
+                                </div>
+                                <div class="form-item">
+                                    <div class="label-box"><img src="images/password.png"></div>
+                                    <input type="password" name="password" placeholder="请输入密码" class="text-input" id="password">
+                                    <span id="checkpassword">密码错误</span>
+                                </div>
+
+                                <div >
+                                    <input type="submit" class="login-btn" value="立即登录">
+                                </div>
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

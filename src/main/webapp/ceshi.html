@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.1.0.js"></script>
+</head>
+<script>
+    $(function () {
+        $.get("getUserById.do",{"id":1},function () {
+            alert("回调函数");
+        })
+
+    });
+</script>
+<body>
+
+
+</body>
+</html>
