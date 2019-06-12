@@ -4,16 +4,39 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>v-on:keydown</title>
-		<script src="js/vuejs-2.5.16.js"></script>
+		<script src="../js/vuejs-2.5.16.js"></script>
 	</head>
 
 	<body>
 		<div id="app">
-			<input type="text" v-on:keydown="fun($event)">
+			Vue:<input type="text" v-on:keydown="fun($event)">
+			<!--<input type="text" onkeydown="showKeyCode()">-->
 		</div>
 	</body>
 	<script>
 		//view model
+		new Vue({
+			el:"#app",
+			data:{},
+			methods:{
+			    fun:function (event) {
+                    let keyCode = event.keyCode;
+                    console.log(keyCode);
+                    if(keyCode<48 || keyCode>57){
+                        event.preventDefault();
+					}
+                }
+			}
+			
+		});
+
+		// function showKeyCode() {
+		//     let keyCode = event.keyCode;
+		//     if(keyCode<48 || keyCode>57){
+		//         event.preventDefault();
+		// 	}
+		//
+        // }
 	</script>
 	
 	
